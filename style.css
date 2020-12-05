@@ -6,10 +6,9 @@
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
-}
-button {
-	font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-weight: bold;
 }
 
 header {
@@ -20,13 +19,9 @@ header {
 	align-items: center;
 }
 
-.logo-container,
-.nav-links,
-.cart {
+.logo-container, .nav-links{
 	display: flex;
 }
-
-
 
 nav {
 	flex: 2;
@@ -77,6 +72,11 @@ nav {
 	animation: drop 1.5s ease;
 }
 
+.about {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 @keyframes drop {
