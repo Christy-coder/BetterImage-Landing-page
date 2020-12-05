@@ -1,66 +1,125 @@
+
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
-.container {
-  height: 100vh;
-  width: 100%;
-  background-image: url("./assets/background.jpg");
-  background-position: center;
-  background-size: cover;
-  padding-left: 5%;
-  padding-right: 5%;
-  position: relative;
+body {
+	font-family: 'Poppins', sans-serif;
+}
+button {
+	font-family: 'Poppins', sans-serif;
 }
 
-.navbar {
-  width: 100%;
-  height: 15vh;
-  margin: auto;
-  display: flex;
-  align-items: Center;
-
+header {
+	display: flex;
+	width: 90%;
+	height: 10vh;
+	margin: auto;
+	align-items: center;
 }
 
-nav ul li {
-  display: inline-block;
-  list-style: none;
-  margin: 0px 20px;
-
+.logo-container,
+.nav-links,
+.cart {
+	display: flex;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #333;
+
+
+nav {
+	flex: 2;
+}
+.nav-links {
+	justify-content: space-around;
+	list-style: none;
+}
+.nav-link {
+	color: #5f5f79;
+	font-size: 18px;
+	text-decoration: none;
 }
 
-.content {
-    width: 500px; 
-    height: 500px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+.presentation {
+	display: flex;
+	width: 90%;
+	margin: auto;
+	min-height: 80vh;
+	align-items: center;
+}
+.introduction {
+	flex: 1;
+}
+.intro-text h1 {
+	font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #494964, #6f6f89);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.intro-text p {
+	margin-top: 5px;
+	font-size: 22px;
+	color: #585772;
 }
 
-.logo {
-    color: blue;
-    margin-top: 0px;
-    display: block;
-    font-weight: bold;
-    font-size: 2.5rem;
-} 
+.cover {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	height: 60vh;
+}
+.cover img {
+	height: 100%;
+	filter: drop-shadow(0px 5px 3px black);
+	animation: drop 1.5s ease;
+}
 
 
 
+@keyframes drop {
+	0% {
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
 
-/* @media screen and (max-width: 768px) {
-    .pre-nav {
-        flex-direction: column;
-        justify-content: center;
-    }
+@media screen and (max-width: 1024px) {
+	.presentation {
+		flex-direction: column;
+	}
+	.introduction {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h1 {
+		font-size: 30px;
+	}
+	.intro-text p {
+		font-size: 18px;
+	}
+	.cta {
+		padding: 10px 0px 0px 0px;
+	}
+	.laptop-select {
+		bottom: 5%;
+		right: 50%;
+		width: 50%;
+		transform: translate(50%, 5%);
+	}
+	.cover img {
+		height: 80%;
+	}
+	.small-circle,
+	.medium-circle,
+	.big-circle {
+		opacity: 0.2;
+	}
+}
 
-    .content {
-        font-size: 1.5rem;
-    }
-} */
