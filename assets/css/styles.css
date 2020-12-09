@@ -73,11 +73,6 @@ a{
   text-decoration: none;
 }
 
-img{
-  max-width: 100%;
-  height: auto;
-}
-
 /*===== LAYOUT =====*/
 .bd-grid{
   max-width: 1024px;
@@ -142,10 +137,6 @@ img{
 
   #start {
     height: 850px;    
-  }
-
-  html{
-    scroll-behavior: smooth;
   }
 
 }
