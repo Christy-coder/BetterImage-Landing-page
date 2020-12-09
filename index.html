@@ -13,7 +13,8 @@
         <link rel = "icon" type= "image" href = "./assets/Copy of Better.png">
     </head>
     <body>
-        <!--===== HEADER =====-->
+
+        <!--===== NAV =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
@@ -33,6 +34,8 @@
                         <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                         <li class="nav__item"><a href="#explore" class="nav__link">Explore</a></li>
                         <li class="nav__item"><a href="#betterimage" class="nav__link">BetterImage</a></li>
+                        <li class="nav__item"><a href="#results" class="nav__link">Results</a></li>
+                        <li class="nav__item"><a href="#start" class="nav__link">Getting Started</a></li>
                         <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
                     </ul>
                 </div>
@@ -44,50 +47,145 @@
             <section class="home" id="home">
                 <div class="home__container bd-grid">
                     <div class="home__img">
-                        <img src="assets/Copy of Better.png" alt=""  class="move">
-
+                        <img src="assets/Copy of Better.png" alt=""  class="home__img__img">
                     </div>
 
                     <div class="home__data">
-                        <h1 class="home__title">Intro</h1>
-                        <p class="home__description">This tool converts images to WebP format, <br> streamlines the CSS formatting <br>and improves SEO.</p>
+                        <h1 class="home__title">Welcome</h1>
+                        <p class="home__description">BetterImage enhances the image rendering experience <br> on React by providing a component that <br>compresses and edits images.
+                        </p>
                         <a href="#explore" class="home__button">Explore</a>
                     </div>
                 </div>
             </section>
         </main>
 
+        <!-- Problem -->
+        <main class="l-main">
+            <section class="home" id="explore">
+                <div class="home__container bd-grid">
+                    <div class="home__data">
+                        <img src="assets/before.gif" alt="" width="600px" class="home__data__image">
+                    </div>
 
-               </section>
-  <section id="explore">
-      <h1>Explore</h1>
-      
-  </section>
-  <section id="betterimage">
-      <h1>BetterImage</h1>
-     
-  </section>
-  <section id="team">
-      <h1>Team</h1>
-      
-  </section>
+                    <div class="home__img">
+                        <h1 class="home__title">Problem</h1>
+                            <!-- Problem -->
+                            <p class="home__description">
+                                Working with images can get frustrating in React with slow rendering speed, lengthy in-line CSS styling (or dependent on frameworks), and manual image reference paths.
+                            </p>
+                            <p class="home__description">
+                                Most image optimizations are embedded in a framework like Next.JS, requiring significant edits to existing code base.
+                            </p>
+                        <a href="#betterimage" class="home__button">Yikes! What's the Fix?</a>
+                    </div>
+                </div>
+            </section>
+        </main>
 
+        <!-- Solution -->
+        <main class="l-main">
+            <section class="home" id="betterimage">
+                <div class="home__container bd-grid">
+                    <div class="home__img">
+                        <img src="assets/conversion.gif" alt=""  class="home__img__img">
+                    </div>
 
+                    <div class="home__data">
+                        <h1 class="home__title">BetterImage</h1>
+                        <p class="home__description">
+                            BetterImage renders faster with compressed webp <br> files.
+                        </p>
+                        <p class="home__description">
+                            BetterImage caches the compressed images locally, <br> resulting in faster re-renders (It also dynamically references <br> compressed images without needing manual imports)
+                        </p>
+                        <p class="home__description">
+                            BetterImage enables declarative image filters and transformations
+                        </p>
+                        <a href="#results" class="home__button">Tell Me More</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- results -->
+            <main class="l-main">
+                <section class="home" id="results">
+                    <div class="home__container bd-grid">
+                        <div class="home__data">
+                            <img src="assets/memory.png" alt="" class="home__data__img-result">
+                        </div>
+    
+                        <div class="home__img">
+                            <h1 class="home__title">Results</h1>
+                            <p class="home__description">
+                                88.5% less memory transferred over the network.
+                            </p>
+                            <p class="home__description">
+                                BetterImage caches the compressed images locally, resulting in faster re-renders (It also dynamically references compressed images without needing manual imports)
+                            </p>
+                            <p class="home__description">
+                                BetterImage enables declarative image styling
+                            </p>
+                            <a href="#start" class="home__button">How Do I Get Started?</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        
+        <!-- Getting Started -->
+        <main class="l-main">
+            <section class="home" id="start">
+                <div class="home__container bd-grid">
+                    <div class="home__img">
+                        <img class="home__img__img" src="assets/effect-yes.png" alt="" >
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">Getting Started</h1>
+                        <p class="home__description">
+                            BetterImage renders faster with compressed webp <br> files (88.5% less memory transferred over the network).
+                        </p>
+                        <p class="home__description">
+                            BetterImage caches the compressed images locally, <br> resulting in faster re-renders (It also dynamically references <br> compressed images without needing manual imports)
+                        </p>
+                        <p class="home__description">
+                            BetterImage enables declarative image filters and transformations
+                        </p>
+                        <a href="#team" class="home__button">Who Built This?</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- team -->
+        <main class="l-main">
+            <section id="team">
+                <div class="home__container bd-grid">
+                    <div class="home__img">
+                        <h1 class="home__title">BetterImage Team</h1>
+                            <!-- Solution -->
+                            <p class="home__description">
+                                Anderson Koh
+                            </p>
+                            <p class="home__description">
+                                Christelle Desire
+                            </p>
+                            <p class="home__description">
+                                Isaac Kittila
+                            </p>
+                            <p class="home__description">
+                                Shirin Davis
+                            </p>
+                            <a href="#home" class="home__button">Back to Top</a>
+                    </div>
+                    <div class="home__data">
+                        <img class="home__data__img-result" src="assets/Betterimage.gif" alt="">
+                    </div>
+                </div>
+            </section>
         </main>
         
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
        <!--DO NOT TOUCH THIS SECTION CAUSE IT CONNECTS WITH JS FILE-->
         <!--===== GSAP =====-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>

@@ -6,7 +6,7 @@
   --header-height: 3rem;
 
   /*===== Colors =====*/
-  --first-color: #a4bbfc;
+  --first-color: #5a84fa;
   --first-color-dark: #C1576A;
   --first-color-darken: #A83E51;
   --white-color: #FCF8F8;
@@ -36,7 +36,7 @@
   background: grey;
 }
 
-@media screen and (min-width: 768%){
+@media screen and (min-width: 760px){
   :root{
     --big-font-size: 5rem;
     --normal-font-size: 1rem;
@@ -46,6 +46,10 @@
 /*===== BASE =====*/
 *,::before,::after{
   box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body{
@@ -114,6 +118,36 @@ img{
     backdrop-filter: blur(10px);
     transition: .5s;
   }
+
+  .home__data__img {
+    width: 170px;
+  }
+
+  .home__data__img-result {
+    width: 170px;
+  }
+
+  .home__img__img{
+    width: 175px;
+  }
+
+  .home__description{
+    margin-bottom: 0rem;
+  }
+
+  #results {
+    height: 850px;
+  }
+
+
+  #start {
+    height: 850px;    
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
+
 }
 
 .nav__close{
@@ -160,8 +194,9 @@ img{
 
 
 .home__data{
-  color: var(--white-color);
+  color: var(--black-color);
 }
+
 
 .home__title{
   font-size: var(--big-font-size);
@@ -193,9 +228,7 @@ section {
   text-align: justify;
   width: 100%;
   height: 100vh;
-
   scroll-snap-align: center;
-
 }
 
 section h1 {
@@ -205,28 +238,32 @@ section h1 {
 
 /* Section Images */
 section#home {
-  color: var(--first-color: #a4bbfc);
+  color: var(--first-color: #5a84fa);
 }
 
 section#explore {
-  background-color: lavender;
+  background-color: #7396fa;
 }
 
 section#betterimage {
-  background-color: lightpink;
+  background-color: #8ba9fb;
+}
+
+section#results {
+  background-color: #a4bbfc;
+}
+
+section#start {
+  background-color: #bdcdfd;
 }
 
 section#team {
-  background-color: lime;
+  background-color: #d6e0fe;
 }
 
 
-
-
-
-
 /* ===== MEDIA QUERIES =====*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 760px){
   body{
     margin: 0;
   }
@@ -260,10 +297,17 @@ section#team {
   .home__img{
     order: 1;
     width: 375px;
-    height: 289px;
   }
 
-  .home__img img{
+  .home__data__img {
+    width: 350px;
+  }
+
+  .home__data__img-result {
+    width: 400px;
+  }
+
+  .home__img__img{
     width: 375px;
   }
 }
@@ -287,4 +331,5 @@ section#team {
   .home__img img{
     width: 604px;
   }
+
 }
