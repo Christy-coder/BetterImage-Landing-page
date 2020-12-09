@@ -16,7 +16,7 @@
 
         <!--===== NAV =====-->
         <header class="l-header">
-            <nav class="nav bd-grid">
+            <nav class="nav">
                 <div>
                     <a href="#" class="nav__logo"><h1>BetterImage</h1></a>
                 </div>
@@ -35,7 +35,7 @@
                         <li class="nav__item"><a href="#explore" class="nav__link">Explore</a></li>
                         <li class="nav__item"><a href="#betterimage" class="nav__link">BetterImage</a></li>
                         <li class="nav__item"><a href="#results" class="nav__link">Results</a></li>
-                        <li class="nav__item"><a href="#start" class="nav__link">Getting Started</a></li>
+                        <li class="nav__item"><a href="#start" class="nav__link">Start</a></li>
                         <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
                     </ul>
                 </div>
@@ -45,16 +45,22 @@
         <main class="l-main">
             <!--===== HOME =====-->
             <section class="home" id="home">
-                <div class="home__container bd-grid">
-                    <div class="home__img">
-                        <img src="assets/Copy of Better.png" alt=""  class="home__img__img">
+                <div class="home__container">
+                    <div class="home__right__top">
+                        <img src="assets/Copy of Better.png" alt=""  class="welcome__img">
                     </div>
 
-                    <div class="home__data">
+                    <div class="home__left">
                         <h1 class="home__title">Welcome</h1>
-                        <p class="home__description">BetterImage enhances the image rendering experience <br> on React by providing a component that <br>compresses and edits images.
+                        <div class="home__description">
+                            BetterImage enhances the image rendering experience on React by providing a component that compresses and edits images.
+                        </div>
+                        <p class="fast-start">
+                            <a href="#explore" class="home__button">Explore BetterImage</a>
                         </p>
-                        <a href="#explore" class="home__button">Explore</a>
+                        <p class="fast-start">
+                            <a target="_blank" href="https://github.com/oslabs-beta/BetterImage.JS" class="home__button__secondary">Just Get Me Started!</a>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -64,18 +70,21 @@
         <main class="l-main">
             <section class="home" id="explore">
                 <div class="home__container">
-                    <div class="home__data">
-                        <img src="assets/before.gif" alt="" width="600px" class="home__data__image">
+                    <div class="home__left__problem">
+                        <img src="assets/before.gif" alt="" class="home__data__img">
                     </div>
 
-                    <div class="home__img">
+                    <div class="home__right">
                         <h1 class="home__title">Problem</h1>
                             <!-- Problem -->
                             <p class="home__description">
-                                Working with images can get frustrating in React with slow rendering speed, lengthy in-line CSS styling (or dependent on frameworks), and manual image reference paths.
+                                Working with images can get frustrating in React with slow rendering speed, lengthy in-line CSS styling, and manual image reference paths.
                             </p>
                             <p class="home__description">
                                 Most image optimizations are embedded in a framework like Next.JS, requiring significant edits to existing code base.
+                            </p>
+                            <p class="home__description">
+                                Basic image rendering features like default fallback image are not readily available in React.
                             </p>
                         <a href="#betterimage" class="home__button">Yikes! What's the Fix?</a>
                     </div>
@@ -86,21 +95,25 @@
         <!-- Solution -->
         <main class="l-main">
             <section class="home" id="betterimage">
-                <div class="home__container bd-grid">
-                    <div class="home__img">
+                <div class="home__container">
+                    <div class="home__right__bi">
                         <img src="assets/conversion.gif" alt=""  class="home__img__img">
+                        <img src="assets/placeholder.gif" alt=""  class="home__img__img">
                     </div>
 
-                    <div class="home__data">
+                    <div class="home__left">
                         <h1 class="home__title">BetterImage</h1>
                         <p class="home__description">
-                            BetterImage renders faster with compressed webp <br> files.
+                            BetterImage dynamically renders compressed webp files in React.
                         </p>
                         <p class="home__description">
-                            BetterImage caches the compressed images locally, <br> resulting in faster re-renders (It also dynamically references <br> compressed images without needing manual imports)
+                            BetterImage caches the compressed images locally, resulting in faster re-renders (It also dynamically references compressed images without needing manual imports).
                         </p>
                         <p class="home__description">
-                            BetterImage enables declarative image filters and transformations
+                            BetterImage provides default placeholder image when the image fails to load as expected.
+                        </p>
+                        <p class="home__description">
+                            BetterImage enables declarative image styling like filters and transformations.
                         </p>
                         <a href="#results" class="home__button">Tell Me More</a>
                     </div>
@@ -108,27 +121,31 @@
             </section>
         </main>
 
-        <!-- results -->
+        <!-- Results -->
             <main class="l-main">
                 <section class="home" id="results">
-                    <div class="home__container bd-grid">
-                        <div class="home__data">
-                            <img src="assets/memory.png" alt="" class="home__data__img-result">
+                    <div class="home__container">
+                        <div class="home__right__results">
+                            <h1 class="home__title__result">Results</h1>
+                            <p class="home__description__result">
+                                59.8% less memory transferred over the network (Left image rendered using original images versus Right image rendered with BetterImage).
+                            </p>
+                            <img src="assets/memory.png" alt="" class="home__img__img">
+                            <p class="home__description__result">
+                                Google Lighthouse Performance score improved by 15.9% (Time to Interactive decreased by 300ms including conversion time)
+                            </p>
+                            <img src="./assets/bi.png" alt="" class="home__img__img">
+                            <div class="home__description__result">
+                                Applying multiple effect on images has never been easier (version 1.0.0 supports all CSS transformation and filter effects. Refer to Readme for base units and default parameters)
+                            </div>
+                            <div class="home__description__result">
+                                <img src="assets/effect.gif" alt="" class="home__data__img-effect"> 
+                            </div>
+                            <br>
+                            <br>
+                            <a href="#start" class="home__button">I'm Sold! How Do I Get Started?</a>
                         </div>
-    
-                        <div class="home__img">
-                            <h1 class="home__title">Results</h1>
-                            <p class="home__description">
-                                88.5% less memory transferred over the network.
-                            </p>
-                            <p class="home__description">
-                                BetterImage caches the compressed images locally, resulting in faster re-renders (It also dynamically references compressed images without needing manual imports)
-                            </p>
-                            <p class="home__description">
-                                BetterImage enables declarative image styling
-                            </p>
-                            <a href="#start" class="home__button">How Do I Get Started?</a>
-                        </div>
+                    </div>
                     </div>
                 </section>
             </main>
@@ -136,23 +153,28 @@
         <!-- Getting Started -->
         <main class="l-main">
             <section class="home" id="start">
-                <div class="home__container bd-grid">
-                    <div class="home__img">
-                        <img class="home__img__img" src="assets/effect-yes.png" alt="" >
+                <div class="home__container">
+                    <div class="home__right__start">
+                        <img class="start__img" src="assets/effect-yes.png" alt="" >
                     </div>
 
-                    <div class="home__data">
+                    <div class="home__left">
                         <h1 class="home__title">Getting Started</h1>
                         <p class="home__description">
-                            BetterImage renders faster with compressed webp <br> files (88.5% less memory transferred over the network).
+                            Getting started with BetterImage is easy! Head on over to project GitHub repository!
                         </p>
                         <p class="home__description">
-                            BetterImage caches the compressed images locally, <br> resulting in faster re-renders (It also dynamically references <br> compressed images without needing manual imports)
+                            Use the repository as a template to get familiar with using BetterImage then import your own images to give it a try!
                         </p>
                         <p class="home__description">
-                            BetterImage enables declarative image filters and transformations
+                            Please reference the Readme if you need further support!
                         </p>
-                        <a href="#team" class="home__button">Who Built This?</a>
+                        <p class="home__description">
+                            <a target="_blank" href="https://github.com/oslabs-beta/BetterImage.JS" class="home__button">Start Here </a>
+                        </p>
+                        <p class="home__description">
+                            <a href="#team" class="home__button__secondary">I'm curious...Who Built This?</a>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -161,33 +183,39 @@
         <!-- team -->
         <main class="l-main">
             <section id="team">
-                <div class="home__container bd-grid">
-                    <div class="home__img">
+                <div class="home__container">
+                    <div class="home__right__bot">
                         <h1 class="home__title">BetterImage Team</h1>
                             <!-- Solution -->
                             <p class="home__description">
                                 Anderson Koh
                             </p>
-                            <img height="16px" width="16px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg" />
-                            <img height="16px" width="16px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
+                            <a href="https://github.com/vincentvankoh"><img height="32px" width="32px" target="_blank" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg" /></a>
+                            <a href="https://www.linkedin.com/in/andersonkoh/"><img height="32px" target="_blank" width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" /></a>
+                            
                             <p class="home__description">
                                 Christelle Desire
                             </p>
-                            <img height="16px" width="16px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg" />
-                            <img height="16px" width="16px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
+                            <a href="https://github.com/Christy-coder"><img height="32px" width="32px" target="_blank" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg" /></a>
+                            <a href="https://www.linkedin.com/in/christelle-desire/"><img height="32px" target="_blank" width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" /></a>
+
                             <p class="home__description">
                                 Isaac Kittila
                             </p>
-                            <img height="16px" width="16px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg" />
-                            <img height="16px" width="16px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
+                            <a href="https://github.com/klavyatur"><img height="32px" width="32px" target="_blank" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg" /></a>
+                            <a href="https://www.linkedin.com/in/isaac-kittila/"><img height="32px" target="_blank" width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" /></a>
+
                             <p class="home__description">
                                 Shirin Davis
                             </p>
-                            <img height="16px" width="16px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg" />
-                            <img height="16px" width="16px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
+                            <a href="https://github.com/littleShirin"><img height="32px" width="32px" target="_blank" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg" /></a>
+                            <a href="https://www.linkedin.com/in/shirin-davis/"><img height="32px" target="_blank" width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" /></a>
+
+                            <br>
+
                             <a href="#home" class="home__button">Back to Top</a>
-                    </div>
-                    <div class="home__data">
+                        </div>
+                    <div class="home__left__team">
                         <img class="home__data__img-result" src="assets/Betterimage.gif" alt="">
                     </div>
                 </div>
@@ -200,6 +228,36 @@
 
         <!--===== About BetterImage =====-->
         <script src="assets/js/main.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- smooth scrolling support for non-compatible browsers -->
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 400, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            } // End if
+        });
+        });
+        </script>
       
     </body>
 </html>
